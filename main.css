@@ -1,0 +1,138 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Island Moments', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Serif Pro', serif;
+}
+
+body{
+    background-color: #000000;
+    color: white;
+    margin: 0px 200px;
+}
+
+.head{
+    height: 10vh;
+    margin: 0px 0px 50px 0px;
+    text-align:center;
+}
+
+.form{
+    margin: auto;
+    max-width: 380px;
+    padding: 25px;
+}
+/* INPUT BUTTON STYLING */
+.head .container .form #currency{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    border: 2px solid #ccc;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* MAIN SECTION */
+
+.main-content .container{
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+.main-content .container table {
+    table-layout: fixed;
+    border-spacing:0;
+
+}
+
+.main-content .container .paginate{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 20px;
+}
+#border{
+    width: 78vw;
+    border: 1px solid #A0A0A0;
+    border-radius: 5px;
+}
+
+#head-table {
+    background-color: #FFBF00;
+    color: #28282B;
+    height: 40px;
+    border-spacing:0;
+}
+
+tr:hover{
+    cursor: pointer;
+    background-color: #28282B;
+}
+
+tr{
+    transition: 0.3s ease-in;
+
+}
+
+
+/* BUTTON STYLING */
+/* CSS */
+.button-32 {
+  background-color: #FFBF00;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 10%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom:50px;
+  margin-top:20px;
+  transition: 0.3s;
+}
+
+.button-32:hover {
+  outline: 0;
+  opacity: 0.7;
+}
+
+/* Loading Spinner */
+
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+} 
+a{
+    width: 1000px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

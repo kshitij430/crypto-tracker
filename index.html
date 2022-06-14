@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINK TO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Roboto:wght@300&family=Source+Serif+Pro&display=swap" rel="stylesheet" />
+    <!-- LINK TO STYLESHEET -->
+    <link rel="stylesheet" href="./main.css" />
+    <!-- AXIOS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- ChartJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Crypto-Tracker</title>
+  </head>
+  <body>
+    <section class="header">
+      <button class="button-32" id="home">Home</button>
+      <select class="button-32" name="curr" id="curr" style="color: white; background-color: black">
+        <option value="inr">INR</option>
+        <option value="usd">USD</option>
+      </select>
+    </section>
+
+    <section class="head">
+      <div class="container">
+        <h1 id="header">Search a Currency</h1>
+        <form class="form">
+          <input type="text" name="currency" id="currency" placeholder="Currency" />
+        </form>
+      </div>
+    </section>
+    <section class="main-content">
+      <div class="container">
+        <table style="width: 100%"></table>
+        <div class="paginate" data-page="1">
+          <button class="button-32" id="prev" style="display: none">previous</button>
+          <button class="button-32" id="next">next</button>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

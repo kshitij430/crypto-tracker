@@ -1,0 +1,11 @@
+{
+  "name": "cryptocurrency-tracker",
+  "version": "1.0.0",
+  "description": "project to track cryptocurrency prices in the market.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kshitij Gajbhiye",
+  "license": "ISC"
+}
