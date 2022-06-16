@@ -2,14 +2,13 @@
   "name": "cryptocurrency-tracker",
   "version": "1.0.0",
   "description": "project to track cryptocurrency prices in the market.",
-  "main": "script.js",
+  "source": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build"
   },
   "author": "Kshitij Gajbhiye",
   "license": "ISC",
   "dependencies": {
-    "chartjs-plugin-zoom": "^1.2.1",
-    "parcel": "^2.6.0"
+    "chartjs-plugin-zoom": "^1.2.1"
   }
 }
