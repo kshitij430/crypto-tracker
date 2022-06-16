@@ -4,9 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINK TO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Roboto:wght@300&family=Source+Serif+Pro&display=swap" rel="stylesheet" />
+    <!-- LINK TO STYLESHEET -->
+    <link rel="stylesheet" href="./coin.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <!-- AXIOS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- ChartJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./node_modules/chart.js/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="./node_modules/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script>
     <title>Document</title>
   </head>
   <body>
-    <h1>hello</h1>
+    <section class="header">
+      <a href="/"><button class="button-32" id="home">Home</button></a>
+      <select class="button-32" name="curr" id="curr" style="color: white; background-color: black">
+        <option value="inr">INR</option>
+        <option value="usd">USD</option>
+      </select>
+    </section>
+    <section class="chart-content">
+      <div class="coin-description"></div>
+      <div class="chart">
+        <canvas id="myChart"></canvas>
+        <div class="buttons">
+          <button class="button-32 chartBtn" data-chartTime="1h">1 Hour</button>
+          <button class="button-32 chartBtn" data-chartTime="24h">24 Hours</button>
+          <button class="button-32 chartBtn" data-chartTime="1m">1 Month</button>
+          <button class="button-32 chartBtn" data-chartTime="3m">3 Months</button>
+        </div>
+      </div>
+    </section>
   </body>
+  <script src="./coin.js"></script>
 </html>

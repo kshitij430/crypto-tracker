@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kshitij Gajbhiye",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chartjs-plugin-zoom": "^1.2.1"
+  }
 }

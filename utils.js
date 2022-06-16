@@ -12,8 +12,6 @@ export const render = function (data, str, currVal) {
         <td style="font-weight: bolder; font-size: 20px">24h Volume</td>
         <td style="font-weight: bolder; font-size: 20px">24h</td>
         <td style="font-weight: bolder; font-size: 20px">Mkt Capital</td>
-        <td style="font-weight: bolder; font-size: 20px">Chart</td>
-        <!-- TODO: Create Overview Chart -->
       </tr>`;
   table.innerHTML = headHtml;
   str == "coin" ? coinRender(data, currSymbol) : coinsArrRender(data, currSymbol);
@@ -21,21 +19,28 @@ export const render = function (data, str, currVal) {
 
 const coinsArrRender = function (data, currSymbol) {
   nextBtn.style.display = "block";
-  data.forEach((el) => {
+  data.forEach((el, i) => {
     const stockChangePercent = Number(el.market_cap_change_percentage_24h);
     const html = `
-        <tr>
+        <tr data-id=${el.id}>
           <td><img src='${el.image}' width="50" height="50"></td>
           <td>${el.name}</td>
           <td><span>${currSymbol}</span>${el.current_price.toLocaleString("en-US")}</td>
           <td><span>${currSymbol}</span>${el.total_volume.toLocaleString("en-US")}</td>
           <td style="color:${stockChangePercent > 0 ? "#3ED625" : "#C70039"}">${stockChangePercent.toFixed(2)}%</td>
           <td><span>${currSymbol}</span>${el.market_cap.toLocaleString("en-US")}</td>
-          <td><div style="height:100px"><canvas id="myChart"></canvas></div></td>
         </tr> 
         <div id="border"></div>
         `;
     table.insertAdjacentHTML("beforeend", html);
+  });
+  // REDIRECTION
+  const tableRow = document.querySelectorAll("tr");
+  tableRow.forEach((row) => {
+    if (row.id === "head-table") return;
+    row.addEventListener("click", function () {
+      location.assign(`./coins.html?id=${this.dataset.id}`);
+    });
   });
 };
 
@@ -45,15 +50,22 @@ const coinRender = function (data, currSymbol) {
   prevBtn.style.display = "none";
   const stockChangePercent = Number(data.market_data.market_cap_change_percentage_24h);
   const html = `
-    <tr>
+    <tr data-id=${data.id}>
       <td><img src='${data.image.small}' width="50" height="50"></td>
       <td>${data.name}</td>
       <td><span>${currSymbol}</span>${data.market_data.current_price.inr.toLocaleString("en-US")}</td>
       <td><span>${currSymbol}</span>${data.market_data.total_volume.inr.toLocaleString("en-US")}</td>
       <td style="color:${stockChangePercent > 0 ? "#3ED625" : "#C70039"}">${stockChangePercent.toFixed(2)}%</td>
       <td><span>${currSymbol}</span>${data.market_data.market_cap.inr.toLocaleString("en-US")}</td>
-      <td><div style="height:100px"><canvas id="myChart"></canvas></div></td>
     </tr>
     `;
   table.insertAdjacentHTML("beforeend", html);
+  // REDIRECTION
+  const tableRow = document.querySelectorAll("tr");
+  tableRow.forEach((row) => {
+    if (row.id === "head-table") return;
+    row.addEventListener("click", function () {
+      location.assign(`./coins.html?id=${this.dataset.id}`);
+    });
+  });
 };
