@@ -1,4 +1,6 @@
 "use strict";
+import "./node_modules/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js";
+import "./node_modules/chart.js/dist/chart.min.js";
 const buttons = document.querySelectorAll(".chartBtn");
 const description = document.querySelector(".description");
 const coinDescription = document.querySelector(".coin-description");
