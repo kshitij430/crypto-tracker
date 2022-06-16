@@ -9,6 +9,7 @@
   "author": "Kshitij Gajbhiye",
   "license": "ISC",
   "dependencies": {
-    "chartjs-plugin-zoom": "^1.2.1"
+    "chartjs-plugin-zoom": "^1.2.1",
+    "parcel": "^2.6.0"
   }
 }
