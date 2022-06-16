@@ -13,7 +13,6 @@ const currChange = document.querySelector("#curr");
 const url = new URL(window.location.href);
 const coin = url.searchParams.get("id").toLowerCase();
 let myChart;
-console.log(coin);
 let color,
   currVal = "inr";
 
@@ -39,8 +38,6 @@ const getCoinData = async function (coin) {
     console.log(err);
   }
 };
-
-console.log(formatAMPM(new Date()));
 
 // MAIN FUNCTIONS
 const chartOverviewRender = async function (coin, prevTime, curr, charttime) {
@@ -98,11 +95,8 @@ const chartOverviewRender = async function (coin, prevTime, curr, charttime) {
 
 const descriptionOverview = async function (coin, curr) {
   try {
-    console.log(curr);
     const { data } = await axios(`https://api.coingecko.com/api/v3/coins/${coin}`);
-    console.log(data);
     const description = data.description.en.replaceAll(/\r\n/g, "<br>");
-    console.log(description);
     const currSymbol = curr == "inr" ? "&#8377" : "&#36";
     coinDescription.innerHTML = `
         <img id='coinImage' style='width:200px;' src="${data.image.large}" alt="" />
@@ -140,7 +134,6 @@ buttons.forEach((btn) => {
 
 currChange.addEventListener("change", function (e) {
   currVal = this.value.toLowerCase();
-  console.log(currVal);
   descriptionOverview(coin, currVal);
   if (myChart) myChart.destroy();
   chartOverviewRender(coin, 86400, currVal, "1d");

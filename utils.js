@@ -3,7 +3,6 @@ const prevBtn = document.querySelector("#prev");
 const nextBtn = document.querySelector("#next");
 export const render = function (data, str, currVal) {
   const currSymbol = currVal == "INR" ? "&#8377" : "&#36";
-  console.log(currSymbol, currVal);
   const headHtml = `
       <tr id="head-table">
         <td style="font-weight: bolder; font-size: 20px">Symbol</td>
@@ -45,7 +44,6 @@ const coinsArrRender = function (data, currSymbol) {
 };
 
 const coinRender = function (data, currSymbol) {
-  console.log(data);
   nextBtn.style.display = "none";
   prevBtn.style.display = "none";
   const stockChangePercent = Number(data.market_data.market_cap_change_percentage_24h);

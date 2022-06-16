@@ -22,7 +22,6 @@ const checkAPIStatus = async function () {
 };
 
 const getCryptoOverview = async function (page, curr) {
-  console.log(`page ${page}`);
   const { data } = await axios(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${curr}&order=market_cap_desc&per_page=10&page=${page}&sparkline=false`);
   if (!currVal) currVal = "INR";
   render(data, "ex", currVal);
