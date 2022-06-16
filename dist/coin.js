@@ -15229,7 +15229,6 @@ const $93dfe2766e46e34f$var$currChange = document.querySelector("#curr");
 const $93dfe2766e46e34f$var$url = new URL(window.location.href);
 const $93dfe2766e46e34f$var$coin = $93dfe2766e46e34f$var$url.searchParams.get("id").toLowerCase();
 let $93dfe2766e46e34f$var$myChart;
-console.log($93dfe2766e46e34f$var$coin);
 let $93dfe2766e46e34f$var$color, $93dfe2766e46e34f$var$currVal = "inr";
 // HELPER FUNCTIONS
 const $93dfe2766e46e34f$var$formatAMPM = function(date) {
@@ -15252,7 +15251,6 @@ const $93dfe2766e46e34f$var$getCoinData = async function(coin1) {
         console.log(err);
     }
 };
-console.log($93dfe2766e46e34f$var$formatAMPM(new Date()));
 // MAIN FUNCTIONS
 const $93dfe2766e46e34f$var$chartOverviewRender = async function(coin2, prevTime, curr, charttime) {
     const currTime = new Date() / 1000;
@@ -15308,11 +15306,8 @@ const $93dfe2766e46e34f$var$chartOverviewRender = async function(coin2, prevTime
 };
 const $93dfe2766e46e34f$var$descriptionOverview = async function(coin3, curr) {
     try {
-        console.log(curr);
         const { data: data  } = await axios(`https://api.coingecko.com/api/v3/coins/${coin3}`);
-        console.log(data);
         const description1 = data.description.en.replaceAll(/\r\n/g, "<br>");
-        console.log(description1);
         const currSymbol = curr == "inr" ? "&#8377" : "&#36";
         $93dfe2766e46e34f$var$coinDescription.innerHTML = `
         <img id='coinImage' style='width:200px;' src="${data.image.large}" alt="" />
@@ -15340,7 +15335,6 @@ $93dfe2766e46e34f$var$buttons.forEach((btn)=>{
 });
 $93dfe2766e46e34f$var$currChange.addEventListener("change", function(e) {
     $93dfe2766e46e34f$var$currVal = this.value.toLowerCase();
-    console.log($93dfe2766e46e34f$var$currVal);
     $93dfe2766e46e34f$var$descriptionOverview($93dfe2766e46e34f$var$coin, $93dfe2766e46e34f$var$currVal);
     if ($93dfe2766e46e34f$var$myChart) $93dfe2766e46e34f$var$myChart.destroy();
     $93dfe2766e46e34f$var$chartOverviewRender($93dfe2766e46e34f$var$coin, 86400, $93dfe2766e46e34f$var$currVal, "1d");

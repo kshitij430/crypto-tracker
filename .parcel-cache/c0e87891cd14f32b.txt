@@ -5,11 +5,11 @@
 108D:\Github Repositories\Cryptocurrency-Tracker\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest6.c132998619728629783 0
 71D:\Github Repositories\Cryptocurrency-Tracker\node_modules\htmlnano\lib132998619721059392 1
 87D:\Github Repositories\Cryptocurrency-Tracker\node_modules\@parcel\optimizer-terser\src132998619717467515 1
-56D:\Github Repositories\Cryptocurrency-Tracker\.gitignore132998627126973038 0
+56D:\Github Repositories\Cryptocurrency-Tracker\.gitignore132998641191470297 0
 78D:\Github Repositories\Cryptocurrency-Tracker\node_modules\hammerjs\tests\unit132997722896242024 1
-50D:\Github Repositories\Cryptocurrency-Tracker\dist132998636395930554 1
+50D:\Github Repositories\Cryptocurrency-Tracker\dist132998643974715794 1
 80D:\Github Repositories\Cryptocurrency-Tracker\node_modules\react-refresh\LICENSE132998619715766353 0
-53D:\Github Repositories\Cryptocurrency-Tracker\coin.js132998636091412178 0
+53D:\Github Repositories\Cryptocurrency-Tracker\coin.js132998640409109727 0
 67D:\Github Repositories\Cryptocurrency-Tracker\node_modules\error-ex132998619717836526 1
 83D:\Github Repositories\Cryptocurrency-Tracker\node_modules\css-select\lib\sort.d.ts132998619725978657 0
 90D:\Github Repositories\Cryptocurrency-Tracker\node_modules\caniuse-lite\data\regions\JE.js132998619734807729 0
@@ -35,7 +35,7 @@
 69D:\Github Repositories\Cryptocurrency-Tracker\node_modules\color-name132998619717836526 1
 72D:\Github Repositories\Cryptocurrency-Tracker\node_modules\yaml\util.mjs132998619727554432 0
 95D:\Github Repositories\Cryptocurrency-Tracker\node_modules\svgo\plugins\cleanupNumericValues.js132998619721508186 0
-56D:\Github Repositories\Cryptocurrency-Tracker\coins.html132998622490586635 0
+56D:\Github Repositories\Cryptocurrency-Tracker\coins.html132998640144911966 0
 166D:\Github Repositories\Cryptocurrency-Tracker\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser-alias\subfolder1\subfolder2\subfile.js132998619728500131 0
 94D:\Github Repositories\Cryptocurrency-Tracker\node_modules\@parcel\reporter-dev-server\LICENSE132998619716081218 0
 101D:\Github Repositories\Cryptocurrency-Tracker\node_modules\type-fest\source\require-at-least-one.d.ts132998619725459519 0
@@ -62,7 +62,7 @@
 76D:\Github Repositories\Cryptocurrency-Tracker\node_modules\tslib\LICENSE.txt132998619720919761 0
 56D:\Github Repositories\Cryptocurrency-Tracker\index.html132998609011312454 0
 90D:\Github Repositories\Cryptocurrency-Tracker\node_modules\css-tree\lib\tokenizer\const.js132998619723943577 0
-55D:\Github Repositories\Cryptocurrency-Tracker\script.js132997701595054593 0
+55D:\Github Repositories\Cryptocurrency-Tracker\script.js132998640483499612 0
 101D:\Github Repositories\Cryptocurrency-Tracker\node_modules\@parcel\packager-js\lib\ESMOutputFormat.js132998619720351280 0
 87D:\Github Repositories\Cryptocurrency-Tracker\node_modules\hammerjs\tests\unit\gestures132997722896222090 1
 58D:\Github Repositories\Cryptocurrency-Tracker\node_modules132998624372848761 1
@@ -86,7 +86,7 @@
 95D:\Github Repositories\Cryptocurrency-Tracker\node_modules\dom-serializer\node_modules\entities132998619721607923 1
 97D:\Github Repositories\Cryptocurrency-Tracker\node_modules\hammerjs\tests\manual\touchaction.html132997722896065980 0
 81D:\Github Repositories\Cryptocurrency-Tracker\node_modules\nan\nan_string_bytes.h132998619723843841 0
-54D:\Github Repositories\Cryptocurrency-Tracker\utils.js132998587902381614 0
+54D:\Github Repositories\Cryptocurrency-Tracker\utils.js132998640592591359 0
 99D:\Github Repositories\Cryptocurrency-Tracker\node_modules\caniuse-lite\data\features\filereader.js132998619734019863 0
 99D:\Github Repositories\Cryptocurrency-Tracker\node_modules\@parcel\watcher\src\windows\win_utils.cc132998619721597949 0
 77D:\Github Repositories\Cryptocurrency-Tracker\node_modules\picocolors\LICENSE132998619715633736 0
@@ -4306,7 +4306,7 @@
 70D:\Github Repositories\Cryptocurrency-Tracker\node_modules\.bin\terser132998619742843864 0
 74D:\Github Repositories\Cryptocurrency-Tracker\node_modules\.bin\terser.cmd132998619742843864 0
 74D:\Github Repositories\Cryptocurrency-Tracker\node_modules\.bin\terser.ps1132998619742833890 0
-58D:\Github Repositories\Cryptocurrency-Tracker\dist\coin.js132998636395860740 0
-62D:\Github Repositories\Cryptocurrency-Tracker\dist\coin.js.map132998636395920600 0
+58D:\Github Repositories\Cryptocurrency-Tracker\dist\coin.js132998643974645985 0
+62D:\Github Repositories\Cryptocurrency-Tracker\dist\coin.js.map132998643974705842 0
 60D:\Github Repositories\Cryptocurrency-Tracker\dist\module.js132998620486797407 0
 64D:\Github Repositories\Cryptocurrency-Tracker\dist\module.js.map132998620486897143 0
