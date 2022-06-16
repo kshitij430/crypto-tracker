@@ -146,6 +146,9 @@ currChange.addEventListener("change", function (e) {
   chartOverviewRender(coin, 86400, currVal, "1d");
 });
 
-getCoinData(coin);
-descriptionOverview(coin, "inr");
-chartOverviewRender(coin, 86400, "inr", "1d"); //  24 * 60 * 60 = 604800 (1 day)
+const init = async function () {
+  await getCoinData(coin);
+  await descriptionOverview(coin, "inr");
+  await chartOverviewRender(coin, 86400, "inr", "1d"); //  24 * 60 * 60 = 604800 (1 day)
+};
+init();
