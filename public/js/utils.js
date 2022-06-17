@@ -38,7 +38,7 @@ const coinsArrRender = function (data, currSymbol) {
   tableRow.forEach((row) => {
     if (row.id === "head-table") return;
     row.addEventListener("click", function () {
-      location.assign(`./coins.html?id=${this.dataset.id}`);
+      window.location.assign(`${location.hostname}/public/coin.html?id=${this.dataset.id}`);
     });
   });
 };
@@ -63,7 +63,7 @@ const coinRender = function (data, currSymbol) {
   tableRow.forEach((row) => {
     if (row.id === "head-table") return;
     row.addEventListener("click", function () {
-      location.assign(`./coins.html?id=${this.dataset.id}`);
+      window.location.assign(`${location.hostname}/public/coin.html?id=${this.dataset.id}`);
     });
   });
 };

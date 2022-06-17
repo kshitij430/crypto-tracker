@@ -15222,16 +15222,16 @@ var $e128d83b56e0d473$export$2e2bcd8739ae039 = {
 "use strict";
 (0, $22a5eaf847bb8284$export$acaa6426d77a227e).register((0, $e128d83b56e0d473$export$2e2bcd8739ae039));
 (0, $22a5eaf847bb8284$export$acaa6426d77a227e).register(...(0, $22a5eaf847bb8284$export$e8959e79e3af550f));
-const $93dfe2766e46e34f$var$buttons = document.querySelectorAll(".chartBtn");
-const $93dfe2766e46e34f$var$description = document.querySelector(".description");
-const $93dfe2766e46e34f$var$coinDescription = document.querySelector(".coin-description");
-const $93dfe2766e46e34f$var$currChange = document.querySelector("#curr");
-const $93dfe2766e46e34f$var$url = new URL(window.location.href);
-const $93dfe2766e46e34f$var$coin = $93dfe2766e46e34f$var$url.searchParams.get("id").toLowerCase();
-let $93dfe2766e46e34f$var$myChart;
-let $93dfe2766e46e34f$var$color, $93dfe2766e46e34f$var$currVal = "inr";
+const $a7f58a8bd7f7d440$var$buttons = document.querySelectorAll(".chartBtn");
+const $a7f58a8bd7f7d440$var$description = document.querySelector(".description");
+const $a7f58a8bd7f7d440$var$coinDescription = document.querySelector(".coin-description");
+const $a7f58a8bd7f7d440$var$currChange = document.querySelector("#curr");
+const $a7f58a8bd7f7d440$var$url = new URL(window.location.href);
+const $a7f58a8bd7f7d440$var$coin = $a7f58a8bd7f7d440$var$url.searchParams.get("id").toLowerCase();
+let $a7f58a8bd7f7d440$var$myChart;
+let $a7f58a8bd7f7d440$var$color, $a7f58a8bd7f7d440$var$currVal = "inr";
 // HELPER FUNCTIONS
-const $93dfe2766e46e34f$var$formatAMPM = function(date) {
+const $a7f58a8bd7f7d440$var$formatAMPM = function(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var ampm = hours >= 12 ? "pm" : "am";
@@ -15242,17 +15242,17 @@ const $93dfe2766e46e34f$var$formatAMPM = function(date) {
     return strTime;
 };
 // NOTE: USE THIS FUNCTION FOR DESCRIPTION OF THE COIN
-const $93dfe2766e46e34f$var$getCoinData = async function(coin1) {
+const $a7f58a8bd7f7d440$var$getCoinData = async function(coin1) {
     try {
         const { data: data  } = await axios(`https://api.coingecko.com/api/v3/coins/${coin1}`);
         const stockChangePercent = Number(data.market_data.market_cap_change_percentage_24h);
-        $93dfe2766e46e34f$var$color = stockChangePercent > 0 ? "#3ED625" : "#C70039";
+        $a7f58a8bd7f7d440$var$color = stockChangePercent > 0 ? "#3ED625" : "#C70039";
     } catch (err) {
         console.log(err);
     }
 };
 // MAIN FUNCTIONS
-const $93dfe2766e46e34f$var$chartOverviewRender = async function(coin2, prevTime, curr, charttime) {
+const $a7f58a8bd7f7d440$var$chartOverviewRender = async function(coin2, prevTime, curr, charttime) {
     const currTime = new Date() / 1000;
     const lastSixtyMin = currTime - prevTime;
     // DONT MANIPULATE
@@ -15260,7 +15260,7 @@ const $93dfe2766e46e34f$var$chartOverviewRender = async function(coin2, prevTime
     const labels = [];
     const priceData = [];
     chartData.data.prices.forEach((el)=>{
-        labels.push($93dfe2766e46e34f$var$formatAMPM(new Date(el[0])));
+        labels.push($a7f58a8bd7f7d440$var$formatAMPM(new Date(el[0])));
         priceData.push(el[1]);
     });
     const data = {
@@ -15270,8 +15270,8 @@ const $93dfe2766e46e34f$var$chartOverviewRender = async function(coin2, prevTime
         datasets: [
             {
                 label: `Price Past (${charttime})`,
-                backgroundColor: $93dfe2766e46e34f$var$color,
-                borderColor: $93dfe2766e46e34f$var$color,
+                backgroundColor: $a7f58a8bd7f7d440$var$color,
+                borderColor: $a7f58a8bd7f7d440$var$color,
                 // actual data to be plotted
                 data: priceData
             }, 
@@ -15302,14 +15302,14 @@ const $93dfe2766e46e34f$var$chartOverviewRender = async function(coin2, prevTime
         },
         responsive: true
     };
-    $93dfe2766e46e34f$var$myChart = new (0, $22a5eaf847bb8284$export$acaa6426d77a227e)(document.getElementById("myChart"), config);
+    $a7f58a8bd7f7d440$var$myChart = new (0, $22a5eaf847bb8284$export$acaa6426d77a227e)(document.getElementById("myChart"), config);
 };
-const $93dfe2766e46e34f$var$descriptionOverview = async function(coin3, curr) {
+const $a7f58a8bd7f7d440$var$descriptionOverview = async function(coin3, curr) {
     try {
         const { data: data  } = await axios(`https://api.coingecko.com/api/v3/coins/${coin3}`);
         const description1 = data.description.en.replaceAll(/\r\n/g, "<br>");
         const currSymbol = curr == "inr" ? "&#8377" : "&#36";
-        $93dfe2766e46e34f$var$coinDescription.innerHTML = `
+        $a7f58a8bd7f7d440$var$coinDescription.innerHTML = `
         <img id='coinImage' style='width:200px;' src="${data.image.large}" alt="" />
         <h1 id='coinName'>${data.name}</h1>
         <p id='coinDesc'>${description1}</p>
@@ -15318,10 +15318,10 @@ const $93dfe2766e46e34f$var$descriptionOverview = async function(coin3, curr) {
         <h1>Market Capital: ${currSymbol} ${data.market_data.market_cap[curr].toLocaleString("en-US")}</h1>
     `;
     } catch (err) {
-        $93dfe2766e46e34f$var$description.innerHTML = err.message;
+        $a7f58a8bd7f7d440$var$description.innerHTML = err.message;
     }
 };
-$93dfe2766e46e34f$var$buttons.forEach((btn)=>{
+$a7f58a8bd7f7d440$var$buttons.forEach((btn)=>{
     btn.addEventListener("click", function(e) {
         let prevTime;
         const { charttime: charttime  } = this.dataset;
@@ -15329,22 +15329,22 @@ $93dfe2766e46e34f$var$buttons.forEach((btn)=>{
         if (charttime === "24h") prevTime = 86400;
         if (charttime === "1m") prevTime = 2592000;
         if (charttime === "3m") prevTime = 7776000;
-        $93dfe2766e46e34f$var$myChart.destroy();
-        $93dfe2766e46e34f$var$chartOverviewRender($93dfe2766e46e34f$var$coin, prevTime, $93dfe2766e46e34f$var$currVal, charttime);
+        $a7f58a8bd7f7d440$var$myChart.destroy();
+        $a7f58a8bd7f7d440$var$chartOverviewRender($a7f58a8bd7f7d440$var$coin, prevTime, $a7f58a8bd7f7d440$var$currVal, charttime);
     });
 });
-$93dfe2766e46e34f$var$currChange.addEventListener("change", function(e) {
-    $93dfe2766e46e34f$var$currVal = this.value.toLowerCase();
-    $93dfe2766e46e34f$var$descriptionOverview($93dfe2766e46e34f$var$coin, $93dfe2766e46e34f$var$currVal);
-    if ($93dfe2766e46e34f$var$myChart) $93dfe2766e46e34f$var$myChart.destroy();
-    $93dfe2766e46e34f$var$chartOverviewRender($93dfe2766e46e34f$var$coin, 86400, $93dfe2766e46e34f$var$currVal, "1d");
+$a7f58a8bd7f7d440$var$currChange.addEventListener("change", function(e) {
+    $a7f58a8bd7f7d440$var$currVal = this.value.toLowerCase();
+    $a7f58a8bd7f7d440$var$descriptionOverview($a7f58a8bd7f7d440$var$coin, $a7f58a8bd7f7d440$var$currVal);
+    if ($a7f58a8bd7f7d440$var$myChart) $a7f58a8bd7f7d440$var$myChart.destroy();
+    $a7f58a8bd7f7d440$var$chartOverviewRender($a7f58a8bd7f7d440$var$coin, 86400, $a7f58a8bd7f7d440$var$currVal, "1d");
 });
-const $93dfe2766e46e34f$var$init = async function() {
-    await $93dfe2766e46e34f$var$getCoinData($93dfe2766e46e34f$var$coin);
-    await $93dfe2766e46e34f$var$descriptionOverview($93dfe2766e46e34f$var$coin, "inr");
-    await $93dfe2766e46e34f$var$chartOverviewRender($93dfe2766e46e34f$var$coin, 86400, "inr", "1d"); //  24 * 60 * 60 = 604800 (1 day)
+const $a7f58a8bd7f7d440$var$init = async function() {
+    await $a7f58a8bd7f7d440$var$getCoinData($a7f58a8bd7f7d440$var$coin);
+    await $a7f58a8bd7f7d440$var$descriptionOverview($a7f58a8bd7f7d440$var$coin, "inr");
+    await $a7f58a8bd7f7d440$var$chartOverviewRender($a7f58a8bd7f7d440$var$coin, 86400, "inr", "1d"); //  24 * 60 * 60 = 604800 (1 day)
 };
-$93dfe2766e46e34f$var$init();
+$a7f58a8bd7f7d440$var$init();
 
 
 //# sourceMappingURL=coin.js.map

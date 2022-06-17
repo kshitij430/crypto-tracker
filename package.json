@@ -2,7 +2,7 @@
   "name": "cryptocurrency-tracker",
   "version": "1.0.0",
   "description": "project to track cryptocurrency prices in the market.",
-  "source": "coin.js",
+  "source": "/public/js/coin.js",
   "main": "dist/coin.js",
   "targets": {
     "main": {
@@ -10,7 +10,8 @@
     }
  },
   "scripts": {
-    "build": "parcel build"
+    "build": "parcel build",
+    "watch": "parcel watch"
   },
   "author": "Kshitij Gajbhiye",
   "license": "ISC",
